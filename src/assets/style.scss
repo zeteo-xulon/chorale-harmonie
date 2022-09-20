@@ -1,0 +1,20 @@
+$primary: #9ccdcc;
+$secondary: #4b8888;
+$tertiary: #f0e0c7;
+
+$bgPrimary: #ffffff;
+$bgSecondary: #1f1f1f;
+
+$txtPrimary: black;
+$txtSecondary: white;
+$txtTertiary: #7b7b7b;
+
+$linkPrimary: #4b8888;
+$linkSecondary: #9ccdcc;
+
+$sm: 560px;
+$md: 960px;
+
+@mixin textFont {
+  font-family: 'Raleway', sans-serif;
+}
