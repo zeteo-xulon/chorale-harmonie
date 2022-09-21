@@ -6,7 +6,7 @@
     <img class="media__image img04" src="./medias/04.jpg" alt="Image des choristes" />
     <img class="media__image img05" src="./medias/05.jpg" alt="Image des choristes" />
     <img class="media__image img06" src="./medias/06.jpg" alt="Image des choristes" />
-    <RouterLink class="more" to="/harmonie/media">+</RouterLink>
+    <RouterLink class="more" to="/gallery">+</RouterLink>
   </section>
 </template>
 

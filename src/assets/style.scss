@@ -18,3 +18,9 @@ $md: 960px;
 @mixin textFont {
   font-family: 'Raleway', sans-serif;
 }
+
+@mixin centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

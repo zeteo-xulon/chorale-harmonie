@@ -1,11 +1,14 @@
 <template>
- 
+  <TheImages />
 </template>
 
 
 
 <script>
-export default {}
+import TheImages from '../components/TheImages.vue'
+export default {
+  components: { TheImages }
+}
 </script>
 
 

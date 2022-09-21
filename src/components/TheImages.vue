@@ -1,4 +1,8 @@
 <template>
+<section class="uc">
+  <h1 class="uc__txt">Cette page est en cours de construction</h1>
+  <img src="./medias/builder-drilling.gif" alt="animation d'un ouvrier au travail" class="uc__img" />
+  </section>
   
 </template>
 
@@ -80,81 +84,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style.scss';
+
+.uc{
+  @include centered;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  &__txt{
+    font-size: 2rem;
+    text-align: center;
+    color: $secondary;
+    transition: all .25s;
+    &:hover{
+      color: $tertiary;
+    }
+  }
+  &__img{
+    width:30rem;
+  }
+
+}
 
 </style>
-
-
-
-/**
-listOfImages: [
-        {
-          key: 1,
-          source: 'assets/medias/01.jpg',
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 2,
-          source: "assets/medias/02.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 3,
-          source: "assets/medias/03.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 4,
-          source: "assets/medias/04.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-          {
-          key: 5,
-          source: "assets/medias/05.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 6,
-          source: "assets/medias/06.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 7,
-          source: "assets/medias/07.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 8,
-          source: "assets/medias/08.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-          {
-          key: 9,
-          source: "assets/medias/09.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 10,
-          source: "assets/medias/10_light.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 11,
-          source: "assets/medias/11.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-         {
-          key: 12,
-          source: "assets/medias/12_light.jpg",
-          alt: "Image de la chorale Harmonie"
-        },
-      ],
-      listOfVideos: [
-        { key: 1,
-        source: "assets/medias/01_light.mp4",
-        alt: "video de la chorale harmonie",
-        }
-      ]
-  
-
-
-*/

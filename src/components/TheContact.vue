@@ -1,7 +1,11 @@
 <template>
-  <section class="contact">
-    <h1 class="">Contactez nous</h1>
-    <a class="contact__btn" href="mailto:n.dreux@live.fr">Contacter</a>
+  <section class="contact-square">
+    <h1 class="contact-square__title">Contactez nous</h1>
+    <p class="contact-square__text">Si vous souhaitez plus de renseignements, vous pouvez nous contacter en appuyant sur le bouton juste en dessous.</p>
+    <div class="contact-square__btn-container">
+      <a class="contact__btn" href="mailto:renice.aka@gmail.com">Contacter</a>
+    </div>
+    
   </section>
 </template>
 
@@ -14,27 +18,38 @@ export default {}
 <style lang="scss" scoped>
 @import '../assets/style.scss';
 
-.form{
-  width: 100%;
-  height: 60%;
-  border: 3px solid $secondary;
-  border-radius: 10px;
+.contact-square{
   display: flex;
   justify-content: center;
   align-content: space-between;
   flex-flow: column nowrap;
+  width: 100%;
+  height: 60%;
   gap: 1rem;
   padding: 1rem;
-  &__title{ text-align: start; }
+  border: 3px solid $secondary;
+  border-radius: 10px;
+  transition: all .25s;
+  &__title{
+    font-size: 1.5rem;
+  }
+  &__text{
+    font-size: 1.1rem;
+    text-align: justify;
+  }
   &__btn-container{
-    display:flex;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5vw;
+    width: 100%;
+  }
+  &:hover{
+    border: 3px solid $tertiary;
   }
 }
 
-button{
+.contact__btn{
+  width:10rem;
   padding: .5rem;
   font-weight: 700;
   border: 3px solid $secondary;
