@@ -1,24 +1,46 @@
 <template>
   <section class="banner">
-    <video class="banner__video" 
-    id="bannerVideo"  
-    src="./medias/harmonie_video_light.mp4"
-    autoplay 
-    loop 
-    muted 
-    playsinline >
+
+    <video v-if="sourceMedia === 1" id="bannerVideo" class="banner__video" autoplay loop muted playsinline>
+    <source class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
+    
     Votre navigateur ne permet pas la lecture de la vidéo.
     </video>
+    <picture v-if="sourceMedia === 2" class="banner__picture">
+      <img class="banner__picture" src="./medias/12_light.jpg" type="jpg" alt="image des chanteuses et chanteurs de la chorale">
+    </picture>
+
     <div class="banner__fader">
       <h1 class="banner__title">Chorale Harmonie</h1>
       <h2 class="banner__sub">Bienvenue sur le site de la chorale Harmonie</h2>
     </div>
+
   </section>
 </template>
 
 
 <script>
-export default {}
+export default {
+  data(){
+    return{
+      sourceMedia: 1,
+    }
+  },
+  methods: {
+    autoSwitch(){
+      setInterval(()=> this.sourceMedia === 1 ? this.sourceMedia = 2 : this.sourceMedia = 1, 30000)
+    },
+    watchScreenToInjectSource(){
+      console.log(window.screen.width)
+    }
+  },
+  beforeMount(){
+    this.watchScreenToInjectSource();
+  },
+  mounted(){
+    this.autoSwitch()
+  }
+}
 </script>
 
 
@@ -30,6 +52,14 @@ export default {}
     width: 100%;
     height: 600px;
     &__video{
+      z-index: 1;
+      object-fit: cover;
+      -o-object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+    &__picture{
       z-index: 1;
       object-fit: cover;
       -o-object-fit: cover;

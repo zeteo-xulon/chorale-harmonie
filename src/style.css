@@ -15,6 +15,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+  font-family: "MusicSync";
+  src: url(../public/Musisync-KVLZ.ttf) format('truetype') ;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

@@ -91,7 +91,7 @@ export default {
   flex-flow: column nowrap;
   padding: 1rem;
   &__txt{
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);;
     text-align: center;
     color: $secondary;
     transition: all .25s;
@@ -100,7 +100,8 @@ export default {
     }
   }
   &__img{
-    width:30rem;
+    width:80%;
+    min-width: 300px;
   }
 
 }

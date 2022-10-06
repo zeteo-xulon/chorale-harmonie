@@ -28,5 +28,12 @@ export default {
   box-sizing: border-box;
   @include textFont;
 }
+.container{
+  display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
 
 </style>
