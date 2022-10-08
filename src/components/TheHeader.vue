@@ -21,7 +21,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-flow: raw nowrap;
+    flex-flow: row nowrap;
     width: 100%;
     background: $bgPrimary;
     padding: 1rem;
@@ -46,7 +46,7 @@ header{
     text-decoration: none;
     font-weight: bold;
     color: $secondary;
-    font-size: 1.5rem;
+    font-size: clamp(0.7rem, 5vw, 1.5rem);
     transition: .2s all;
     
   }
