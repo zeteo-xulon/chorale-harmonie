@@ -3,7 +3,7 @@
 
     <video v-if="sourceMedia === 1" id="bannerVideo" class="banner__video" autoplay loop muted playsinline>
     <source v-if="isMobileDevice" class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
-    <source v-if="!isMobileDevice" class="banner__video" src="./medias/Pour le site- Desktop Version +.mp4" type="video/webm" >
+    <source v-if="!isMobileDevice" class="banner__video" src="./medias/chorale-harmonie_Desktop_Version+.mp4" type="video/webm" >
     
     Votre navigateur ne permet pas la lecture de la vidéo.
     </video>
