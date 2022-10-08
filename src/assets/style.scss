@@ -17,11 +17,11 @@ $md: 960px;
 
 @font-face {
   font-family: MusicKey;
-  src: url(../public/Musisync-KVLZ.ttf);
+  src: url(../public/Musisync-KVLZ.ttf) format('truetype');
 }
 @font-face {
   font-family: Symphonie;
-  src: url(../public/SymphonieCAT.ttf);
+  src: url(../public/SymphonieCAT.ttf) format('truetype');
 }
 
 @mixin textFont {
