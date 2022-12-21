@@ -1,13 +1,13 @@
 <template>
   <section class="banner">
 
-    <video v-if="sourceMedia === 1" id="bannerVideo" class="banner__video" autoplay loop muted playsinline>
-    <source v-if="isMobileDevice" class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
-    <source v-if="!isMobileDevice" class="banner__video" src="./medias/chorale-harmonie_Desktop_Version+.mp4" type="video/webm" >
+    <video v-show="sourceMedia === 1" id="bannerVideo" class="banner__video" autoplay loop muted playsinline>
+      <source v-if="isMobileDevice" class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
+      <source v-if="!isMobileDevice" class="banner__video" src="./medias/chorale-harmonie_Desktop_Version+.mp4" type="video/webm" >
     
-    Votre navigateur ne permet pas la lecture de la vidéo.
+      Votre navigateur ne permet pas la lecture de la vidéo.
     </video>
-    <picture v-if="sourceMedia === 2" class="banner__picture">
+    <picture v-show="sourceMedia === 2" class="banner__picture">
       <img class="banner__picture" src="./medias/12_light.jpg" type="jpg" alt="image des chanteuses et chanteurs de la chorale">
     </picture>
 
