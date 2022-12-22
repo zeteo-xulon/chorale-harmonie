@@ -2,8 +2,8 @@
   <section class="banner">
 
     <video v-show="sourceMedia === 1" id="bannerVideo" class="banner__video" autoplay loop muted playsinline>
-      <source v-if="isMobileDevice" class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
-      <source v-if="!isMobileDevice" class="banner__video" src="./medias/chorale-harmonie_Desktop_Version+.mp4" type="video/webm" >
+      <source v-show="isMobileDevice" class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
+      <source v-show="!isMobileDevice" class="banner__video" src="./medias/chorale-harmonie_Desktop_Version+.mp4" type="video/webm" >
     
       Votre navigateur ne permet pas la lecture de la vidéo.
     </video>
@@ -33,14 +33,7 @@ export default {
       setInterval(()=> this.sourceMedia === 1 ? this.sourceMedia = 2 : this.sourceMedia = 1, 30000)
     },
     isMobile(){
-      const iPhone = navigator.userAgent.match(/iPhone/i);
-      const iPod = navigator.userAgent.match(/iPod/i);
-      const webOS = navigator.userAgent.match(/webOS/i);
-      const android = navigator.userAgent.match(/android/i);
-      const blackBerry = navigator.userAgent.match(/BlackBerry/i);
-      const windowsPhone = navigator.userAgent.match(/Windows Phone/i);
-      if(iPhone || iPod || webOS || android || blackBerry || windowsPhone){ return true }
-      return false;
+     return window.innerWidth < 770 ? true : false ;
     }
   },
   beforeMount(){
