@@ -34,6 +34,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 </style>

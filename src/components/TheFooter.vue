@@ -1,7 +1,7 @@
 <template>
   <footer class="footer" id="footer">
     <p class="footer__text">Conception : <a class="footer__text--link" href="mailto:n.dreux@live.fr" >Nicolas DREUX </a>	| ©2022 - Chorale Harmonie</p>
-    <div class="popup-keys" id="popupContainer"></div>
+    <div class="popup-keys__container" id="popupContainer"></div>
   </footer>
 </template>
 
@@ -32,10 +32,10 @@
         key.style.setProperty('--left', Math.random() * 100 * plusMinus +'%');
         key.style.animation = "keyMovement 30s both";
 
-        setTimeout(() => { key.remove() }, 15000);
+        setTimeout(() => { key.remove() }, 30000);
       },
       generateMusicKeyParticle(){
-        setInterval(()=>  this.musicKeyParticle(), 1000);
+        setInterval(()=>  this.musicKeyParticle(), 3000);
       }
     },
     mounted(){
@@ -45,15 +45,17 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../assets/style.scss';
 
 .footer{
   height:100px;
   width:100%;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
   &__text{
     font-size: 1rem;
     font-weight: 700;
@@ -67,22 +69,28 @@
     }
   }
 }
+.popup-keys__container{
+  position: relative  ;
+  width: 100%;
+}
 .music-key{
     font-family: MusicKey, sans-serif;
     position: absolute;
     border-radius: 50%;
     opacity: 0;
-    animation: keyMovement 8s both;
+    animation: keyMovement 25s both;
     filter: hue-rotate(0deg);
   }
 
   @keyframes keyMovement {
+    50%{
+      opacity: 1;
+    }
     70%{
-    top: -250px;
-    left: var(--left);
-    opacity: 1;
-    filter: hue-rotate(720deg);
-  }
+      top: -3500px;
+      left: var(--left);
+      filter: hue-rotate(720deg);
+    }
   }
 
 </style>
