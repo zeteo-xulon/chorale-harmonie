@@ -1,9 +1,31 @@
 <template>
   <section class="banner">
 
-    <video v-show="sourceMedia === 1" id="bannerVideo" class="banner__video" autoplay loop muted playsinline>
-      <source v-show="isMobileDevice" class="banner__video" src="./medias/harmonie_video_light.mp4" type="video/webm" >
-      <source v-show="!isMobileDevice" class="banner__video" src="./medias/chorale-harmonie_Desktop_Version+.mp4" type="video/webm" >
+    <video
+    v-show="sourceMedia === 1 && isMobileDevice" 
+    id="bannerVideo" 
+    class="banner__video" 
+    src="https://youtu.be/_jQozkArAxI"  
+    autoplay 
+    muted
+    loop 
+    preload="auto"
+    controls="false"
+    >
+      Votre navigateur ne permet pas la lecture de la vidéo.
+    </video>
+
+    <video 
+    v-show="sourceMedia === 1 && !isMobileDevice" 
+    id="bannerVideo" 
+    class="banner__video" 
+    src="https://youtu.be/_jQozkArAxI"  
+    autoplay 
+    muted
+    loop 
+    preload="auto"
+    controls="false"
+    >
     
       Votre navigateur ne permet pas la lecture de la vidéo.
     </video>
