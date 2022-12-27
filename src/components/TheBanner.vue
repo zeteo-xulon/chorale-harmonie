@@ -1,34 +1,34 @@
 <template>
   <section class="banner">
 
-    <video
-    v-show="sourceMedia === 1 && isMobileDevice" 
+    <iframe
+    v-if="sourceMedia === 1 && isMobileDevice" 
     id="bannerVideo" 
     class="banner__video" 
-    src="https://youtu.be/_jQozkArAxI"  
-    autoplay 
-    muted
-    loop 
+    src="https://www.youtube.com/embed/_jQozkArAxI?autoplay=1&loop=1&controls=0&mute=1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    frameborder="0"
+    allowfullscreen 
     preload="auto"
     controls="false"
     >
       Votre navigateur ne permet pas la lecture de la vidéo.
-    </video>
+    </iframe>
 
-    <video 
-    v-show="sourceMedia === 1 && !isMobileDevice" 
+    <iframe 
+    v-if="sourceMedia === 1 && !isMobileDevice" 
     id="bannerVideo" 
     class="banner__video" 
-    src="https://youtu.be/_jQozkArAxI"  
-    autoplay 
-    muted
-    loop 
+    src="https://www.youtube.com/embed/NQaCn4A0sr0?controls=0&autoplay=1&loop=1&mute=1" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    frameborder="0"
+    allowfullscreen 
     preload="auto"
     controls="false"
-    >
-    
+    >  
       Votre navigateur ne permet pas la lecture de la vidéo.
-    </video>
+    </iframe>
+
     <picture v-show="sourceMedia === 2" class="banner__picture">
       <img class="banner__picture" src="./medias/12_light.jpg" type="jpg" alt="image des chanteuses et chanteurs de la chorale">
     </picture>

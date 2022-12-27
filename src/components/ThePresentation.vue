@@ -4,13 +4,18 @@
 
     <aside class="presentation__paragraph">
      <p class="presentation__txt">
-        La Chorale Harmonie est une chorale Gospel à Paris depuis 2020. Notre choeur rassemble des chanteurs amateurs de confession chrétienne, avec une passion commune, chanter ! Notre répertoire alterne des chants gospel, des spirituals et des chants de liberté.</p>
+         Dans Harmonie on entend « Art » et « Monie ». Monie dérivé du grec « motos » qui signifie « seul »…
+Harmonie c’est aussi ἁρμονία en grec..qui signifie unir…aller ensemble…</p>
 
       <p class="presentation__txt">
-          Ce qui nous fait vibrer ? Les rythmes du Gospel, ses harmonies, et l’énergie que ça procure ! Nos représentations, toute l'année, sont toujours des moments forts où l’on peut transmettre notre passion au public. </p>
+          Et c’est là l’essence même de notre choeur. Nous chantons d’une seule et même voix pour offrir un peu de joie en mélodie, un peu d’amour en chanson. Nos représentations toute l’année sont toujours des moments forts où l’on peut transmettre notre passion au public. </p>
 
       <p class="presentation__txt">
-          Venez nous invitez en représentation gospel dans votre établissement, contactez nous pour plus d'informations !</p>
+          Nous intervenons gratuitement en représentation au sein de votre établissement.
+
+          N’hésitez pas à nous contacter pour plus
+          d’informations !
+          </p>
     </aside>
 
   </article>
