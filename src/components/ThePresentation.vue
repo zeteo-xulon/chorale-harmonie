@@ -4,7 +4,7 @@
 
     <aside class="presentation__paragraph">
      <p class="presentation__txt">
-         Dans Harmonie on entend « Art » et « Monie ». Monie dérivé du grec « motos » qui signifie « seul »…
+         Dans Harmonie on entend « Art » et « Monie ». Monie dérivé du grec « monos » qui signifie « seul »…
 Harmonie c’est aussi ἁρμονία en grec..qui signifie unir…aller ensemble…</p>
 
       <p class="presentation__txt">
@@ -69,3 +69,4 @@ export default {
   }
 }
 </style>>
+
