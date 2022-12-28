@@ -1,33 +1,37 @@
 <template>
   <section class="banner">
+    <div class="banner__iframe-container" v-show="sourceMedia === 1">
+      <iframe
+      v-if="sourceMedia === 1 && isMobileDevice" 
+      id="bannerVideo" 
+      class="banner__video" 
+      src="https://www.youtube.com/embed/_jQozkArAxI?autoplay=1&loop=1&controls=0&mute=1"
+      allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      frameborder="0"
+      allowfullscreen 
+      preload="auto"
+      controls="false"
+      >
+        Votre navigateur ne permet pas la lecture de la vidéo.
+      </iframe>
 
-    <iframe
-    v-if="sourceMedia === 1 && isMobileDevice" 
-    id="bannerVideo" 
-    class="banner__video" 
-    src="https://www.youtube.com/embed/_jQozkArAxI?autoplay=1&loop=1&controls=0&mute=1"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    frameborder="0"
-    allowfullscreen 
-    preload="auto"
-    controls="false"
-    >
-      Votre navigateur ne permet pas la lecture de la vidéo.
-    </iframe>
 
-    <iframe 
-    v-if="sourceMedia === 1 && !isMobileDevice" 
-    id="bannerVideo" 
-    class="banner__video" 
-    src="https://www.youtube.com/embed/NQaCn4A0sr0?controls=0&autoplay=1&loop=1&mute=1" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    frameborder="0"
-    allowfullscreen 
-    preload="auto"
-    controls="false"
-    >  
-      Votre navigateur ne permet pas la lecture de la vidéo.
-    </iframe>
+      <iframe 
+      v-if="sourceMedia === 1 && !isMobileDevice" 
+      id="bannerVideo" 
+      class="banner__video" 
+      src="https://www.youtube.com/embed/NQaCn4A0sr0?controls=0&autoplay=1&loop=1&mute=1" 
+      allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      frameborder="0"
+      allowfullscreen 
+      preload="auto"
+      controls="false"
+      >  
+        Votre navigateur ne permet pas la lecture de la vidéo.
+      </iframe>
+
+    </div>
+
 
     <picture v-show="sourceMedia === 2" class="banner__picture">
       <img class="banner__picture" src="./medias/12_light.jpg" type="jpg" alt="image des chanteuses et chanteurs de la chorale">
@@ -68,18 +72,21 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import '../assets/style.scss';
 
   .banner{
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 100%;
     &__video{
       z-index: 1;
       object-fit: cover;
       -o-object-fit: cover;
       object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
     }
@@ -116,10 +123,18 @@ export default {
     }
   }
 
-  // @media screen and (max-width:$sm) {
-  //   .banner{
-  //     &__title{ font-size: clamp(16px, 10vw, 2rem); }
-  //     &__sub{ font-size: clamp(16px, 10vw, 1.5rem); }
-  //   }
-  // }
-</style>>
+  .banner__iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+
+  @media screen and (max-width:$sm) {
+    .banner{
+      &__title{ font-size: clamp(16px, 10vw, 2rem); }
+      &__sub{  font-size: clamp(12px, 4vw, 1rem); }
+    }
+  }
+
+</style>
